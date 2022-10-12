@@ -1,8 +1,8 @@
 #include "header.h"
 
 /**
- * print_sub_list_range - searches the list using binary search algo
- * @list: head of linked list
+ * print_sub_list_range - prints the indexes to search
+ *
  * @low: first index of list or sublist to search
  * @high: last index of list or sublist to search
  */
