@@ -1,10 +1,19 @@
 #include "header.h"
+/**
+ * extend_list - extends a linked list from its end
+ * @array: store of value field of each node
+ * @size: size of the new list to append to the previous list
+ * @prev_size: size of 1st list
+ *
+ * Return: head of list
+ */
 list_t *extend_list(list_t *head, int array[], size_t size, size_t prev_size)
 {
 	list_t *new, *last = head;
 	size_t ceiling = size + prev_size;
 	int index = 0;
 
+	/* get to the last node */
 	while (last->next)
 		last = last->next;
 

@@ -4,7 +4,16 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
-struct s_list {
+/**
+ * struct s_list - structure of each node of a singly linked list
+ * @value: simple store field
+ * @index: index of each node in the list
+ * @next: pointer to next node
+ *
+ * Description: singly linked list. Used to implement binary search algorithm
+ */
+struct s_list
+{
 	int value;
 	size_t index;
 	struct s_list *next;
@@ -17,4 +26,4 @@ void print_list(list_t *list);
 void free_list(list_t *list);
 void print_result(list_t *list);
 
-#endif
+#endif /* HEADER */

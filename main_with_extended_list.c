@@ -1,4 +1,8 @@
 #include "header.h"
+/**
+ * main - program entry
+ * Return: 0
+ */
 int main(void)
 {
 	size_t size, size2;
@@ -12,11 +16,15 @@ int main(void)
 	};
 
 	size = (size_t)(sizeof array / sizeof array[0]);
+
+	/* create initial array */
 	head = create_list(array, size);
 	print_list(head);
 	result = bs_list(head, size, 1024);
 	print_result(result);
+
 	size2 = (size_t)(sizeof array2 / sizeof array2[0]);
+	/* extend initial array */
 	head = extend_list(head, array2, size2, size);
 	print_list(head);
 	result = bs_list(head, (size + size2), 56);

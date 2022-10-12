@@ -1,4 +1,8 @@
 #include "header.h"
+/**
+ * print_result - prints the value and index of the node found
+ * @list: head of list
+ */
 void print_result(list_t *list)
 {
 	if (list)

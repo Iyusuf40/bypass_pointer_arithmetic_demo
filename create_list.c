@@ -1,4 +1,12 @@
 #include "header.h"
+/**
+ * create_list - creates a linked list adding node at the top
+ * @array: array holds sorted integers used to initiallize value field
+ * of each node
+ * @size: no of elements in the array
+ *
+ * Return: head of list or NULL
+ */
 list_t *create_list(int array[], size_t size)
 {
 	list_t *head = NULL, *new;

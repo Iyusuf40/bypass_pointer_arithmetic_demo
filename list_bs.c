@@ -36,8 +36,16 @@ list_t *bs(list_t *list, size_t low, size_t high, size_t factor,
 
 	if (low > high)
 		return (NULL);
-	save = (size_t) list;
-	save = save - (factor * mid);
+
+	/* the next 3 lines is where pointer arithmetic is bypassed */
+	save = (size_t) list; /* save holds address of head */
+	save = save - (factor * mid); 
+	/** 
+	 * save is now exactly address of mid index,
+	 * with pointer arithmetic save - mid won't take to effect the 
+	 * extra 8 bytes padding
+	 */
+	/* now we assign current the address of mid index node*/
 	current = (list_t *) save;
 	print_sub_list_range(low, high);
 	printf("\tValue checked at index [%lu] = [%d]\n", mid, current->value);
@@ -63,6 +71,8 @@ list_t *bs_list(list_t *list, size_t size, int value)
 
 	if (!list || !size)
 		return (NULL);
+
+	/* factor is distance in bytes between contiguous nodes in the list */
 	factor = (size_t)((size_t)list - (size_t)(list->next));
 	printf("\nfactor = %lu\n", factor);
 
