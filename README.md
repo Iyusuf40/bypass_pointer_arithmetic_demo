@@ -7,17 +7,20 @@ Generally, a linked list is traversed linearly. Some implementations e.g. skip l
 ### TO test a short list
 Use the 0-main.c's main function..
 compile like this to use the list_bs.c file: prints list and is verbose
-```gcc [cflp]*c 0-main.c -o prog
+```
+gcc [cflp]*c 0-main.c -o prog
 ```
 
 ### TO test a list of 1,000,000 nodes
 Use the 1-main.c function
 compile like this to use the big_list_bs.c file: does not print list and less verbose
 to prevent clutering stdout
-```gcc [cfbp]*c 1-main.c -o prog
+```
+gcc [cfbp]*c 1-main.c -o prog
 ```
 
 ### To test for even higher numbers 
 use malloc to allocate memory for your array, like in 2-main.c file instead of using static arrays. and compile like this to use the big_list_bs.c file: does not print list and less verbose to prevent clutering stdout
-```gcc [cfbp]*c 1-main.c -o prog
+```
+gcc [cfbp]*c 1-main.c -o prog
 ```
